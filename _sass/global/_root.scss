@@ -1,0 +1,123 @@
+:root {
+  
+  // Basic typography
+  --font-size__min: #{em-unitless(16)};
+  --font-size__max: #{em-unitless(18)};
+  --line-height: 1.625;
+  --line-height__headers: 1.25;
+  --v-rhythm: calc(var(--line-height) * 1em);
+
+  // Spacing
+  @include fluid-units (
+    '--gutter',
+    1.25,
+    3,
+    $bp-sm,
+    $bp-lg
+  );
+
+  // Font Weights
+  // Lora normal and italic supports a range between 400-700
+  --serif__wght: 450;
+  --serif__kern: 0.015625em;
+  
+  // Barlow supports wgth 22-188
+  // Barlow supports wdth 300-500
+  --sans__wght: 72;
+  --sans__wdth: 400;
+  --sans__kern: 0.03125em; // .0625 / 2 
+}
+
+i,
+em,
+cite {
+  --serif__wght: 425;
+  --serif__kern: 0.015625em; // .03125 / 2 
+}
+
+b,
+strong {
+  --serif__wght: 680;
+  --serif__kern: 0.03125em; // .0625 / 2 
+  
+  #{&}.condensed,
+  .condensed & {
+    --sans__wght: 96;
+    --sans__wdth: 358;
+    --sans__kern: 0.015625em; 
+  }
+}
+
+.display-1 {
+  --font-size__min: #{em-unitless(40)};
+  --font-size__max: #{em-unitless(75)};
+  --serif__wght: 400;
+  --serif__kern: -0.015625em;
+}
+
+.display-2 {
+  --font-size__min: #{em-unitless(36)};
+  --font-size__max: #{em-unitless(62)};
+  --serif__wght: 400;
+  --serif__kern: -0.015625em;
+}
+
+.display-3 {
+  --font-size__min: #{em-unitless(33)};
+  --font-size__max: #{em-unitless(52)};
+  --serif__wght: 400;
+  --serif__kern: 0;
+}
+
+h1,
+.h1 {
+  --font-size__min: #{em-unitless(33)};
+  --font-size__max: #{em-unitless(52)};
+  --sans__wght: 96;
+  --sans__wdth: 325;
+  --sans__kern: 0.015625em;
+}
+
+h2,
+.h2 {
+  --font-size__min: #{em-unitless(29)};
+  --font-size__max: #{em-unitless(43)};
+  --serif__wght: 400;
+  --serif__kern: 0;
+}
+
+h3,
+.h3 {
+  --font-size__min: #{em-unitless(26)};
+  --font-size__max: #{em-unitless(36)};
+  --sans__wght: 72;
+  --sans__wdth: 360;
+  --sans__kern: 0.015625em;
+}
+
+h4,
+.h4 {
+  --font-size__min: #{em-unitless(23)};
+  --font-size__max: #{em-unitless(30)};
+  --serif__wght: 700;
+  --serif__kern: -0.015625em;
+}
+
+h5,
+.h5,
+blockquote p {
+  --font-size__min: #{em-unitless(20)};
+  --font-size__max: #{em-unitless(25)};
+  --sans__wght: 120;
+  --sans__wdth: 380;
+  --sans__kern: 0.015625em;
+}
+
+h6,
+.h6 {
+  --font-size__min: #{em-unitless(18)};
+  --font-size__max: #{em-unitless(21)};
+  --sans__wght: 150;
+  --sans__wdth: 400;
+  --sans__kern: 0.03125em;
+}

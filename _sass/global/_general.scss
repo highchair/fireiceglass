@@ -1,0 +1,114 @@
+// Basic global styles
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// IE10+ doesn't honor `<meta name="viewport">` in some cases.
+@at-root {
+  @-ms-viewport {
+    width: device-width;
+  }
+}
+
+html,
+body  {
+  // background-color: ;
+	// color: ;
+	font-family: $fontstack__serif;
+	font-size: 100%;
+	font-style: normal;
+	font-weight: $fallback__weight__serif__normal;
+	font-variation-settings: 
+    'wght' var(--serif__wght);
+	letter-spacing: var(--serif__kern);
+	line-height: var(--line-height);
+	margin: 0;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+// A reset of sorts
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $fallback__weight__serif__normal;
+  line-height: var(--line-height__headers);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, blockquote, ol, ul, dl, table, form, figure, address, pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  list-style-position: outside;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+// Ensure that elements removed from keyboard navigation do not get outlines
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+i,
+em,
+cite {
+  font-family: $fontstack__serif__italic;
+  font-style: italic;
+  font-variation-settings: 
+    'wght' var(--serif__wght);
+  letter-spacing: var(--serif__kern);
+}
+
+b,
+strong {
+  font-weight: $fallback__weight__serif__bold;
+  font-variation-settings:
+    'wght' var(--serif__wght);
+  
+  &.condensed,
+  .condensed & {
+    font-variation-settings:
+      'wght' var(--sans__wght),
+      'wdth' var(--sans__wdth);
+    letter-spacing: var(--sans__kern);
+  }
+}
+
+pre {
+  background-color: mintcream;
+  border: 1px solid green;
+}
+
+code {
+  color: green;
+}
+
+.condensed {
+  font-family: $fontstack__sans;
+  font-variation-settings:
+      'wght' var(--sans__wght),
+      'wdth' var(--sans__wdth);
+  letter-spacing: var(--sans__kern);
+}

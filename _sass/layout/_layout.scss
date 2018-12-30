@@ -1,0 +1,27 @@
+//<body class="layout--page vertical-rhythm">
+//  <a href="#content" id="top">Skip to Content ↓</a>
+//  <main id="content" class="layout__main container">
+//    <header class="container--text">
+//      <h1 class="page__title">Vertical Rhythm</h1>
+//    </header>
+//    <article class="layout__article page__article container--text content">  
+//    </article>
+//  </main>
+//  <footer class="layout__footer container">
+//  </footer>
+//</body>
+
+.layout {
+
+  // <body>
+  &--page {}
+
+  // <main>
+  &__main {}
+
+  // <article>
+  &__article {}
+
+  // <footer>
+  &__footer {}
+}

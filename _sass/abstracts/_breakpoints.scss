@@ -1,0 +1,6 @@
+// Breakpoints expressed in PX, math in EMs
+$bp-xs: em-unitless(480); // 620-480= 140
+$bp-sm: em-unitless(620); // 760-620= 140
+$bp-md: em-unitless(760); // 960-760= 200
+$bp-lg: em-unitless(960); // 1200-960= 240
+$bp-xl: em-unitless(1200);

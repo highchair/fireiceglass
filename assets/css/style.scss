@@ -1,0 +1,16 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+// Each folder should include a "main" file that imports all others
+
+// 1. Variables and functions
+@import "abstracts/main";
+
+// 2. Mixins
+@import "mixins/main";
+
+// 3. Global elements and styles
+@import "global/main";
+
+// 4. Layout
+@import "layout/main";
