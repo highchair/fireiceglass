@@ -87,8 +87,16 @@ h6 {
 }
 
 
-// Vertical rhythm
+// Vertical rhythm and other content-specific styles
 .content {
+
+  a {
+    border-bottom: 3px solid $ice-tint__half;
+  
+    @include hover-focus {
+      border-bottom-color: $ice;
+    }
+  }
 
   h1:first-child,
   h2:first-child,
@@ -178,7 +186,8 @@ h6 {
   figure,
   address,
   form,
-  table {
+  table,
+  hr {
     margin-bottom: var(--v-rhythm);
   }
 
@@ -263,11 +272,15 @@ h6 {
 
   pre {
     padding: 0.75em 1.125em 0.625em;
+    white-space: pre-wrap;
   }
   
   abbr[title] {
     font-size: 75%;
-    letter-spacing: 0.125em;
+    font-weight: $fallback__weight__serif__bold;
+    font-variation-settings:
+      'wght' var(--serif__wght);
+    letter-spacing: var(--serif__kern);
     text-transform: uppercase;
   }
 }

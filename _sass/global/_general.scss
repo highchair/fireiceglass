@@ -22,8 +22,8 @@ html {
 
 html,
 body  {
-  // background-color: ;
-	// color: ;
+  background-color: $white;
+	color: var(--color__text);
 	font-family: $fontstack__serif;
 	font-size: 100%;
 	font-style: normal;
@@ -44,6 +44,18 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+}
+
+a {
+  // border-bottom added in .content (_typography.scss)
+  color: $ice-tint__dark;
+  text-decoration: none;
+  transition: $transition;
+
+  @include hover-focus {
+    color: $fire;
+    text-decoration: none;
+  }
 }
 
 // A reset of sorts
@@ -96,6 +108,22 @@ strong {
   }
 }
 
+small,
+.small {
+  font-variation-settings: 
+    'wght' var(--serif__wght);
+  letter-spacing: var(--serif__kern);
+}
+
+abbr {
+  border-bottom: 1px dotted currentcolor;
+  font-weight: $fallback__weight__serif__bold;
+  font-variation-settings: 
+    'wght' var(--serif__wght);
+  letter-spacing: var(--serif__kern);
+  text-decoration: none;
+}
+
 pre {
   background-color: mintcream;
   border: 1px solid green;
@@ -105,6 +133,21 @@ code {
   color: green;
 }
 
+samp,
+kbd {
+  border: 1px solid $gray-200;
+  margin: 0 0.25em;
+  padding: 0 0.375em;
+}
+
+hr {
+  border-color: var(--color__border);
+  border-style: dotted;
+  border-width: 2px 0 0 0;
+  height: 0;
+}
+
+// Global Classes
 .condensed {
   font-family: $fontstack__sans;
   font-variation-settings:

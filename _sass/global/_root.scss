@@ -24,7 +24,11 @@
   // Barlow supports wdth 300-500
   --sans__wght: 72;
   --sans__wdth: 400;
-  --sans__kern: 0.03125em; // .0625 / 2 
+  --sans__kern: 0.03125em; // .0625 / 2
+  
+  // Colors
+  --color__text: #{$gray-900};
+  --color__border: #{$ice};
 }
 
 i,
@@ -45,6 +49,17 @@ strong {
     --sans__wdth: 358;
     --sans__kern: 0.015625em; 
   }
+}
+
+small,
+.small {
+  --serif__wght: 475;
+  --serif__kern: 0.03125em; 
+}
+
+abbr {
+  --serif__wght: 580;
+  --serif__kern: 0.1875em; 
 }
 
 .display-1 {
@@ -98,7 +113,7 @@ h4,
 .h4 {
   --font-size__min: #{em-unitless(23)};
   --font-size__max: #{em-unitless(30)};
-  --serif__wght: 700;
+  --serif__wght: 650;
   --serif__kern: -0.015625em;
 }
 
