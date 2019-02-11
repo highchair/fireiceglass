@@ -1,0 +1,32 @@
+//<header class="layout__header header">
+//  <div class="header__brand">
+//    <a href="/" class="header__brand__link">
+//      <img src="/assets/images/fire-ice-studio_logo.svg" alt="Fire &amp; Ice Studio">
+//    </a>
+//  </div>
+//  <div class="header__byline">
+//    <em>Architectural Art Glass designed by Deborah Goldhaft</em>
+//  </div>
+//  <h2 class="sr-only">Navigation</h2>
+//  <nav class="layout__nav nav">
+//    [...]
+//  </nav>
+//</header>
+
+.header {
+  background-color: $white;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: flex-start;
+  
+  &__brand {
+    flex: 0 1 50%;
+    padding: var(--v-rhythm) var(--gutter);
+  }
+  
+  &__byline {
+    @include hide;
+    padding: var(--v-rhythm) var(--gutter);
+  }
+}

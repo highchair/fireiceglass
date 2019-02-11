@@ -46,7 +46,14 @@ textarea {
   line-height: inherit;
 }
 
-a {
+img,
+video,
+iframe {
+  max-width: 100%;
+}
+
+// Anchors
+a:not(.btn) {
   // border-bottom added in .content (_typography.scss)
   color: $ice-tint__dark;
   text-decoration: none;
@@ -86,7 +93,7 @@ ol {
 i,
 em,
 cite {
-  font-family: $fontstack__serif__italic;
+  font-family: $fontstack__serif;
   font-style: italic;
   font-variation-settings: 
     'wght' var(--serif__wght);
@@ -110,6 +117,7 @@ strong {
 
 small,
 .small {
+  font-size: 0.875rem;
   font-variation-settings: 
     'wght' var(--serif__wght);
   letter-spacing: var(--serif__kern);
@@ -148,7 +156,8 @@ hr {
 }
 
 // Global Classes
-.condensed {
+.condensed,
+.btn {
   font-family: $fontstack__sans;
   font-variation-settings:
       'wght' var(--sans__wght),

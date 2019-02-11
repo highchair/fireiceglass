@@ -1,0 +1,18 @@
+// <main id="content" class="layout__main main">
+//  <header class="main__header">
+//    <h1 class="main__title">{{ page.title }}</h1>
+//  </header>
+//  <article class="layout__article main__article content">
+//    {{ content }}
+//  </article>
+// </main>
+
+.main {
+  background: linear-gradient(
+    to bottom,
+    percent-color($ice, 30%) 0px,
+    rgba($white, 0) 100%
+  );
+  background-size: 100% 480px;
+  background-repeat: no-repeat;
+}

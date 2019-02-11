@@ -1,0 +1,31 @@
+// Buttons and links that look like buttons
+
+.btn {
+  background-color: palette(fire);
+  border: 1px solid palette(fire);
+  color: palette('white');
+  display: inline-block;
+  font-size: rem(21);
+  line-height: 1;
+  padding: 0.625em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  transition: $transition;
+
+  @include hover-focus {
+    background-color: palette(ice-half);
+    border: 1px solid palette(fire);
+    color: palette(fire);
+  }
+  
+  &--outline {
+    background-color: transparent;
+    color: palette(fire);
+    
+    @include hover-focus {
+      background-color: palette(ice-half);
+      border: 1px solid palette(ice-dark);
+      color: palette(ice-dark);
+    }
+  }
+}

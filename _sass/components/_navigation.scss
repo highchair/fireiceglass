@@ -1,0 +1,36 @@
+//<nav class="layout__nav nav">
+//  <ul class="nav__list">
+//    <li class="nav__item"><a class="nav__link" href="/about-deborah-goldhaft">About</a></li>
+//    <li class="nav__item">
+//      <a class="nav__link" href="/glass-art">Glass Art</a>
+//      <ul class="nav__list__child">
+//        <li class="nav__item__child"><a child="nav__link__child" href="/fine-art-glass">Fine Art</a></li>
+//        <li class="nav__item__child"><a child="nav__link__child" href="/architectural-glass">Architectural</a></li>
+//      </ul>
+//    </li>
+//    <li class="nav__item"><a class="nav__link" href="/workshops">Workshops</a></li>
+//    <li class="nav__item"><a class="nav__link" href="/contact">Contact</a></li>
+//  </ul>
+//</nav>
+
+.nav {
+  flex: 0 1 50%;
+  text-align: center;
+  
+  &__list {
+    
+    &__child {
+      @include hide;
+    }
+  }
+  
+  &__item {
+    
+    &__child {}
+  }
+  
+  &__link {
+    
+    &__child {}
+  }
+}

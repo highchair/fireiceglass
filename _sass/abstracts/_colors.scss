@@ -23,3 +23,19 @@ $gray-700: #444;
 //$gray-800: #343a40 !default;
 $gray-900: #222;
 $black:    #101010;
+
+$colors: () !default;
+$colors: (
+  fire: $fire,
+  ice: $ice,
+  ice-lightest: $ice-tint__lightest,
+  ice-lighter: $ice-tint__lighter,
+  ice-light: $ice-tint__light,
+  ice-half: $ice-tint__half,
+  ice-dark: $ice-tint__dark,
+  'white': $white,
+  gray-200: $gray-200,
+  gray-700: $gray-700,
+  gray-900: $gray-900,
+  'black': $black,
+);

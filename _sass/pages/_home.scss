@@ -1,0 +1,27 @@
+// body
+.page__home {
+  
+  .main__header {
+    @include sr-only;
+  }
+}
+
+.actions {
+
+  .btn {
+    display: block;
+  }
+}
+
+.image-grid--home {
+  
+  .image-grid--home__1 {}
+  
+  .image-grid--home__head-1 {}
+  
+  .image-grid--home__2 {}
+  
+  .image-grid--home__head-2 {}
+  
+  .image-grid--home__3 {}
+}

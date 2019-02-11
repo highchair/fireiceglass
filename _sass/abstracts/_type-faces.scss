@@ -9,10 +9,9 @@ $fallback__weight__sans__bold: 700;
 
 // Variable fonts
 $variable__serif: 'LoraGX';
-$variable__serif__italic: 'LoraItalicGX';
+$variable__serif__italic: 'LoraItalicGX'; // used in name only nside _font-face.scss
 $variable__sans: 'BarlowGX';
 
 // Font Stacks
 $fontstack__serif: $variable__serif, $fallback__serif, Georgia, serif;
-$fontstack__serif__italic: $variable__serif__italic, $fallback__serif, Georgia, serif;
 $fontstack__sans: $variable__sans, $fallback__sans, ArialNarrow, 'Arial Narrow', sans;

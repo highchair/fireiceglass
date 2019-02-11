@@ -1,0 +1,20 @@
+// Text Alignment
+
+.text-align-left {
+  text-align: left;
+}
+.text-align-center {
+  text-align: center;
+}
+.text-align-right {
+  text-align: right;
+}
+
+// Colors
+// Loop through all colors and output utility classes
+// Sample: $text-color-fire
+@each $key, $value in $colors {
+  .text-color-#{$key} {
+    color: $value;
+  }
+}
