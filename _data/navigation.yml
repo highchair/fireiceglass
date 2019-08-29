@@ -1,0 +1,32 @@
+# Manage navigation here instead of in an HTML file
+
+- title: "About"
+  href: "about-deborah-goldhaft"
+
+- title: "Glass Art"
+  href: "portfolio"
+  children:
+    - title: "Fine Art"
+      href: "fine-art-glass"
+      children:
+        - title: "Anthropology"
+          href: "anthropology"
+        - title: "Natural World"
+          href: "natural-world"
+        - title: "Geometric"
+          href: "geometric"
+    - title: "Architectural"
+      href: "architectural-glass"
+      children:
+        - title: "Anthropology"
+          href: "anthropology"
+        - title: "Natural World"
+          href: "natural-world"
+        - title: "Geometric"
+          href: "geometric"
+
+- title: "Workshop"
+  href: "workshops"
+
+- title: "Contact"
+  href: "contact"

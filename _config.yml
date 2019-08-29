@@ -14,13 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Deborah Goldhaft
+title: "Deborah Goldhaft"
 email: deborah@fireiceglass.com
-company: Fire Ice Glass
-description: Architectural Art Glass artisan Deborah Goldhaft crafts fine art glass, custom architectural designs, and functional art pieces, as well as offers workshops for groups and individuals. Let's make a one-of-a-kind custom etched architectural art glass piece for your home or business. 
+company: "Fire & Ice Glass Studio"
+company-short: "Fire & Ice"
+description: "Architectural Art Glass artisan Deborah Goldhaft crafts fine art glass, custom architectural designs, and functional art pieces, as well as offers workshops for groups and individuals. Let's make a one-of-a-kind custom etched architectural art glass piece for your home or business."
 
 port: 4050
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/new2019/" # the subpath of your site, e.g. /blog
+image-path: "assets/images/"
+portfolio-path: "assets/portfolio/"
 url: "http://www.fireiceglass.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -56,4 +59,4 @@ exclude:
   - Gemfile.lock
   - kramdown.md
   - README.md
-  - source/
+  - OLD/
