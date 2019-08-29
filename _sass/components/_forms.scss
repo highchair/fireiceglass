@@ -1,0 +1,43 @@
+// Form Elements
+
+label,
+.label {
+  font-family: $fontstack__sans;
+  font-variation-settings:
+    'wght' 120,
+    'wdth' 420;
+  letter-spacing: 0.03125em;
+  text-transform: uppercase;
+}
+
+// Specific Forms
+.form {
+  
+  &--encapsulate {
+    
+    input:not(.btn) {
+      border: 0;
+      display: inline-block;
+    }
+    
+    &__row {
+      border: 1px solid palette(gray-200);
+      margin-bottom: -1px !important;
+      padding: 0.5rem;
+    }
+    
+    &--t {
+      border-top-left-radius: $border-radius;
+      border-top-right-radius: $border-radius;
+    }
+    
+    &--b {
+      border-bottom-left-radius: $border-radius;
+      border-bottom-right-radius: $border-radius;
+    }
+    
+    &__btn {
+      margin-top: 1rem;
+    }
+  }
+}

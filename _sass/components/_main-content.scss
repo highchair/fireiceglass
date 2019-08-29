@@ -1,18 +1,65 @@
-// <main id="content" class="layout__main main">
-//  <header class="main__header">
-//    <h1 class="main__title">{{ page.title }}</h1>
-//  </header>
-//  <article class="layout__article main__article content">
-//    {{ content }}
+//<main class="layout__main main">
+//  <article class="main__article typography" id="content">
+//    <header class="main__header">
+//      <h1 class="main__title display-1">Deborah Goldhaft, Architectural Art Glass</h1>
+//    </header>
 //  </article>
-// </main>
+//</main>
 
 .main {
+  @include spacing();
   background: linear-gradient(
     to bottom,
-    percent-color($ice, 30%) 0px,
-    rgba($white, 0) 100%
+    rgba(percent-color($ice, 50%), 0.5) 0px,
+    rgba($white, 0.5) 480px
   );
-  background-size: 100% 480px;
   background-repeat: no-repeat;
+  min-height: 90vh;
+  overflow-x: hidden;
+
+  @include bp-up($left-nav) {
+    background: rgba($ice, 0.1);
+  }
+
+  &__header {
+    @include bp-up($bp-lg) {
+      @include spacing('b');
+    }
+  }
+
+  &__title {
+    color: var(--color__brand__ice--dark);
+    opacity: 0.75;
+    padding-top: var(--v-rhythm);
+    padding-bottom: var(--v-rhythm);
+    
+    .page__portfolio-category &,
+    .page__portfolio-item & span {
+      --font-size__min: #{em-unitless(36)};
+      --font-size__max: #{em-unitless(62)};
+      --sans__wght: 96;
+      --sans__wdth: 325;
+      --sans__kern: 0.015625em;
+      font-family: $fontstack__sans;
+      font-variation-settings:
+        'wght' var(--sans__wght),
+        'wdth' var(--sans__wdth);
+      letter-spacing: var(--sans__kern);
+      text-transform: uppercase;
+    }
+    
+    .page__portfolio-category &,
+    .page__portfolio-item & {
+      text-align: center;
+    }
+  }  
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    
+    @include bp-up($left-nav) {
+      @include spacing('x');
+    }
+  }
 }

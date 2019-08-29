@@ -9,7 +9,7 @@
 @font-face {
   font-family: $variable__serif;
   src: url('../fonts/#{$variable__serif}.ttf') format('truetype-variations');
-  font-display: swap; // https://css-tricks.com/almanac/properties/f/font-display/
+  font-display: fallback; // https://css-tricks.com/almanac/properties/f/font-display/
   font-style: normal;
   font-weight: 400 700;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: $variable__serif;
   src: url('../fonts/#{$variable__serif__italic}.ttf') format('truetype-variations');
-  font-display: swap;
+  font-display: fallback;
   font-style: italic;
   font-weight: 400 700;
 }
@@ -29,6 +29,6 @@
 @font-face {
   font-family: $variable__sans;
   src: url('../fonts/#{$variable__sans}.woff2') format('woff2-variations');
-  font-display: swap;
+  font-display: fallback;
   font-style: normal;
 }

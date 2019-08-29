@@ -1,0 +1,53 @@
+.article {
+  
+  &__callout {
+    @include spacing('y');
+  }
+  
+  &__content {
+    @include spacing('y');
+    max-width: em(720);
+    margin: 0 auto;
+    
+    @include bp-up($bp-xs) {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+    
+    .typography {
+      columns: 2 320px;
+      column-gap: var(--gutter);
+      
+      .span-multiple {
+        column-span: all;
+      }
+      
+      p {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    }
+  }
+  
+  &__actions {
+    @include spacing('y');
+    text-align: center;
+    
+    .btn {
+      display: block;
+      
+      + .btn {
+        margin-top: calc(var(--v-rhythm)/2);
+      }
+      
+      @include bp-up($left-nav) {
+        display: inline-block;
+        
+        + .btn {
+          margin-top: 0;
+          margin-left: calc(var(--v-rhythm)/2);
+        }
+      }
+    }
+  }
+}

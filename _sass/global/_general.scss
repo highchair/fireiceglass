@@ -7,10 +7,12 @@
 }
 
 html {
+  background-color: $white;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -ms-overflow-style: scrollbar;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  scroll-behavior: smooth;
 }
 
 // IE10+ doesn't honor `<meta name="viewport">` in some cases.
@@ -21,8 +23,11 @@ html {
 }
 
 html,
+body {
+  overflow-x: hidden;
+}
+
 body  {
-  background-color: $white;
 	color: var(--color__text);
 	font-family: $fontstack__serif;
 	font-size: 100%;
@@ -55,12 +60,12 @@ iframe {
 // Anchors
 a:not(.btn) {
   // border-bottom added in .content (_typography.scss)
-  color: $ice-tint__dark;
+  color: var(--color__brand__ice--dark);
   text-decoration: none;
   transition: $transition;
 
   @include hover-focus {
-    color: $fire;
+    color: var(--color__brand__fire);
     text-decoration: none;
   }
 }
@@ -143,7 +148,7 @@ code {
 
 samp,
 kbd {
-  border: 1px solid $gray-200;
+  border: 1px solid palette(gray-200);
   margin: 0 0.25em;
   padding: 0 0.375em;
 }
@@ -160,7 +165,7 @@ hr {
 .btn {
   font-family: $fontstack__sans;
   font-variation-settings:
-      'wght' var(--sans__wght),
-      'wdth' var(--sans__wdth);
+    'wght' var(--sans__wght),
+    'wdth' var(--sans__wdth);
   letter-spacing: var(--sans__kern);
 }

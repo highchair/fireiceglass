@@ -1,36 +1,94 @@
-//<nav class="layout__nav nav">
+//<nav class="layout__nav nav" aria-label="Main">
 //  <ul class="nav__list">
-//    <li class="nav__item"><a class="nav__link" href="/about-deborah-goldhaft">About</a></li>
 //    <li class="nav__item">
-//      <a class="nav__link" href="/glass-art">Glass Art</a>
-//      <ul class="nav__list__child">
-//        <li class="nav__item__child"><a child="nav__link__child" href="/fine-art-glass">Fine Art</a></li>
-//        <li class="nav__item__child"><a child="nav__link__child" href="/architectural-glass">Architectural</a></li>
-//      </ul>
+//      <a class="nav__link" href="/about-deborah-goldhaft">About</a>               
 //    </li>
-//    <li class="nav__item"><a class="nav__link" href="/workshops">Workshops</a></li>
-//    <li class="nav__item"><a class="nav__link" href="/contact">Contact</a></li>
-//  </ul>
-//</nav>
+//    <li class="nav__item">
+//      <a class="nav__link" href="/portfolio">Glass Art</a>
+//      <ul class="nav__list__child">
+//        <li class="nav__item__child">
+//          <a class="nav__link__child nav__link--disabled" href="/portfolio/fine-art-glass">Fine Art</a>
+//            <ul id="fine-art-glass" class="nav__list__grand-child">
+//              <li class="nav__item__grand-child">
+//                <a class="nav__link__grand-child nav__link--disabled" href="/portfolio/fine-art-glass/anthropology">Anthropology</a>
+//              </li>
 
 .nav {
   flex: 0 1 50%;
+  padding: calc(var(--v-rhythm)/2) 0;
   text-align: center;
   
-  &__list {
+  /*ul*/&__list {
     
-    &__child {
+    /*ul*/&__child {
       @include hide;
+      padding-bottom: calc(var(--v-rhythm)/2);
+      
+      @include bp-up($left-nav) {
+        @include show();
+      }
+    }
+    
+    /*ul*/&__grand-child {
+      @include hide;
+      padding-bottom: var(--v-rhythm);
     }
   }
   
-  &__item {
+  /*li*/&__item {
     
-    &__child {}
+    /*li*/&__child {}
+    
+    /*li*/&__grand-child {}
   }
   
-  &__link {
-    
-    &__child {}
+  a {
+    display: block; 
   }
+  
+  /*a*/&__link {
+    @include bp-up($left-nav) {
+      padding: calc(var(--v-rhythm)/2) calc(var(--gutter)/2);
+    }
+
+    // :not adds specificity, which is a bummer. Needed to override a:not() in general.scss
+    /*a*/&__child:not(.btn) {
+      // All caps style
+      color: var(--color__brand__fire);
+      font-family: $fontstack__sans;
+      font-variation-settings:
+        'wght' var(--sans__wght),
+        'wdth' var(--sans__wdth);
+      letter-spacing: var(--sans__kern);
+      padding: 0 calc(var(--gutter)/2) calc(var(--v-rhythm)/4);
+      text-transform: uppercase;
+    }
+    
+    /*a*/&__grand-child:not(.btn) {
+      color: var(--color__brand__ice--dark);
+      font-family: $fontstack__sans;
+      font-variation-settings:
+        'wght' var(--sans__wght),
+        'wdth' var(--sans__wdth);
+      letter-spacing: var(--sans__kern);
+    }
+    
+    &--disabled:not(.btn),
+    &--disabled:not(.btn):hover,
+    &--disabled:not(.btn):focus {
+      color: var(--color__text--muted);
+      cursor: default;
+    }
+  }
+}
+
+// Showing the right grand-child navigation
+/*body*/.fine-art-glass #fine-art-glass,
+.architectural #architectural {
+  @include show();
+}
+
+.fine-art-glass .nav__link__child.nav__link--disabled,
+.architectural .nav__link__child.nav__link--disabled {
+  color: var(--color__brand__fire) !important;
 }

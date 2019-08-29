@@ -1,0 +1,54 @@
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(9, [col] 1fr);
+  grid-template-rows: repeat(6, [row] 15vh);
+  grid-gap: 0 0;
+
+  img {
+    box-shadow: 0.25rem 0.25rem 1rem rgba(#000, 0.33);
+  }
+  
+  h2 {
+    color: $white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    text-shadow: 0.25rem 0.25rem 1rem rgba(#000, 0.33);
+  }
+  
+  &__head-1,
+  &__head-2,
+  &__head-3 {
+   color: $white;
+   font-style: italic;
+   z-index: 10;
+  }
+  
+  .typography & .display-1,
+  .typography & .display-2,
+  .typography & .display-3 {
+    line-height: 1 !important;
+    margin-top: 0 !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .typography & a:not(.btn) {
+    border-bottom: 0;
+  }
+  
+  @include bp-up($left-nav) {
+    @include spacing('b');
+    grid-template-rows: repeat(9, [row] 4.5vw);
+    
+    h2 {
+      text-shadow: 0.25rem 0.25rem 1rem rgba(#000, 0.5);
+    }
+  }
+  
+  @include bp-up($bp-xl) {
+    grid-template-rows: repeat(9, [row] 4.5vw);
+    
+    h2 {
+      text-shadow: 0.25rem 0.25rem 1rem rgba(#000, 0.66);
+    }
+  }
+}

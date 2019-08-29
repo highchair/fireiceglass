@@ -3,14 +3,17 @@
 ---
 // Each folder should include a "main" file that imports all others
 
-// 1. Variables and functions
-@import "abstracts/main";
+// 1. Variables, functions, mixins, animations
+@import "abstracts/index";
 
-// 2. Mixins
-@import "mixins/main";
+// 2. Global elements and styles
+@import "global/index";
 
-// 3. Global elements and styles
-@import "global/main";
+// 3. Layout
+@import "layout/index";
 
-// 4. Layout
-@import "layout/main";
+// 4. Components
+@import "components/index";
+
+// 5. Pages
+@import "pages/index";

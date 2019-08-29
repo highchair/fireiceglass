@@ -14,19 +14,59 @@
 //</header>
 
 .header {
-  background-color: $white;
+  background: linear-gradient(rgba($ice-tint__half, 0.5), rgba(#fff, 0.5));
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+  
+  @include bp-up($left-nav) {
+    background: rgba($ice, 0.25);
+    border-right: 1px solid $white;
+    display: block;
+    
+    &::after {
+      content: '';
+      background: linear-gradient(-45deg, rgba($white, 0.5), rgba($ice-tint__half, 0.33));
+      position: absolute;
+      top: -20vw;
+      left: 5vw;
+      width: 90vw;
+      height: 90vw;
+      transform: rotate(22deg);
+      z-index: -1;
+    }
+  }
+  
+  //@media (min-height: em(720)) {
+  //  position: fixed;
+  //  overflow-y: auto;
+  //  width: 25%;
+  //  height: 100vh;
+  //}
   
   &__brand {
     flex: 0 1 50%;
     padding: var(--v-rhythm) var(--gutter);
+    
+    &__link {
+      img {
+        display: block;
+        max-width: 180px;
+        margin: 0 auto;
+      }
+    }
   }
   
   &__byline {
     @include hide;
-    padding: var(--v-rhythm) var(--gutter);
+    color: palette(gray-600);
+    padding: var(--v-rhythm) calc(var(--gutter)/2);
+    text-align: center;
+    
+    @include bp-up($left-nav) {
+      @include show();
+    }
   }
 }

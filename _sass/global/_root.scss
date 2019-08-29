@@ -4,15 +4,16 @@
   --font-size__min: #{em-unitless(16)};
   --font-size__max: #{em-unitless(18)};
   --line-height: 1.625;
-  --v-rhythm: calc(var(--line-height) * 1em);
+  --v-rhythm: calc(var(--line-height) * 1rem);
+  --line-height__headers: 1.25;
 
   // Spacing
   @include fluid-units (
     '--gutter',
     1,
-    3.5,
-    $bp-sm,
-    $bp-lg
+    2.5,
+    strip-unit(rem($bp-sm)),
+    strip-unit(rem($bp-lg))
   );
 
   // Font Weights
@@ -27,8 +28,12 @@
   --sans__kern: 0.03125em; // .0625 / 2
   
   // Colors
-  --color__text: #{$gray-900};
-  --color__border: #{$ice};
+  --color__text: #{palette(gray-900)};
+  --color__text--muted: #{palette(gray-600)};
+  --color__border: #{palette(ice)};
+  --color__brand__fire: #{palette(fire)};
+  --color__brand__ice: #{palette(ice)};
+  --color__brand__ice--dark: #{palette(ice-dark)};
 }
 
 i,

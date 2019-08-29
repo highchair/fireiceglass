@@ -1,0 +1,61 @@
+/*
+  Service Announcement:
+
+  Drupal can be dumb sometimes… this external library uses camel case for its class names
+  We need to change that, because the Twig filter "cleanclass" does not honor it
+
+  IF YOU ADD MORE ANIMATIONS HERE PLEASE CHANGE THEIR CLASS NAMES
+
+  end of service announcement
+
+  Expected class structure:
+  Selector class:     animate--initial
+  Animation class:    animate__once__[effect]
+  JS class on change: animate--active
+  Initial string:     animate--initial animate__once__fadein
+  JS fires:           animate--initial animate__once__fadein animate--active
+*/
+
+html {
+  body {
+    overflow-x: hidden; // for when animated objects are "off canvas"
+  }
+
+  .animate {
+    &--initial {
+      will-change: transform, opacity;
+      animation-play-state: paused;
+      visibility: hidden;
+    }
+
+    &--active {
+      animation-direction: normal;
+      animation-duration: 750ms;
+      animation-fill-mode: forwards;
+      animation-iteration-count: 1;
+      animation-play-state: running;
+      animation-timing-function: ease-in-out;
+      visibility: visible;
+    }
+  }
+}
+
+
+@media print {
+  // Kill all transitions and animations
+  .animate {
+    &--initial,
+    &--active {
+      animation: none !important;
+      transition-property: none !important;
+      transform: none !important;
+
+      // Unhide any elements that were waiting to be animated
+      html.js & {
+        animation-duration: 0ms;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    }
+  }
+}
