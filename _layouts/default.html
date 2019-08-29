@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+
+    {% include meta.html %}
+
+  </head>
+  <body class="layout layout--{{ page.layout }}{% if page.body-class %} {{ page.body-class }}{% endif %}">
+    <a href="#content" id="top" class="sr-only-focusable">Skip to Content &darr;</a>
+    
+    {% include header.html %}
+    
+    {{ content }}
+
+    <footer class="layout__footer footer">
+      <section class="footer__contact">
+        <p>
+          <span class="small">
+            <a href="mailto:info@fireiceglass.com">info@fireiceglass.com</a>
+              <span class="footer__splitter"> // </span>
+            <a href="tel:1+401-383-8691">(401) 383-8691</a>
+          </span>
+        </p>
+      </section>
+      <section class="footer__copyright">
+        <p>
+          <span class="small">
+            &copy;{{ 'now' | date: "%Y" }} {{ site.title }}<br>
+            {{ site.company }}
+          </span>
+        </p>
+      </section>
+      <a href="#top" class="sr-only-focusable">Back to top &uarr;</a>
+    </footer>
+    
+    {% comment %}
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+      if (!window.jQuery) { document.write('<script src="{{ site.baseurl }}assets/js/jquery.js"><\/script>'); }
+    </script>
+    <script src="{{ site.baseurl }}assets/js/plugins.js"></script>
+    <script src="{{ site.baseurl }}assets/js/scripts.js"></script>
+    {% endcomment %}
+  </body>
+</html>

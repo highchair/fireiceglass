@@ -1,0 +1,15 @@
+{% if page.canonical %}
+  {% assign canon_url = page.canonical %}
+{% else %}
+  {% assign canon_url = page.url | replace:'index','' | prepend: site.url %}
+{% endif %}
+
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>{% if page.html-title %}{{ page.html-title }}{% else %}{{ page.title }} | {{ site.company-short }}{% endif %}</title>
+	{% if page.url == 'index' %}
+  	<meta name="description" content="{{ site.description }}">
+	{% endif %}
+  	<meta name="viewport" content="width=device-width">
+  	<link rel="canonical" href="{{ canon_url }}">
+  	<link rel="stylesheet" href="{{ 'assets/css/style.css' | prepend: site.baseurl }}">
