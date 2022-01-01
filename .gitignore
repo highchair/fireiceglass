@@ -1,4 +1,6 @@
+OLD/
 .jekyll-metadata
+.nova/
 _site/
 .sass-cache/
 *.css.map
