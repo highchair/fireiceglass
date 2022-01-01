@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+{% comment %}
+
+  This template wraps the content in "article__content" wrapper,
+  which is more narrow than "main_content"
+  
+{% endcomment %}
+
+      <main class="layout__main main">
+        <article class="main__article" id="content">
+          <div class="main__content typography">
+            <div class="article__content">
+              <header class="main__header">
+                <h1 class="main__title display-3">{{ page.title }}</h1>
+              </header>
+              {{ content }}
+            </div>
+          </div>
+        </article>
+      </main>
