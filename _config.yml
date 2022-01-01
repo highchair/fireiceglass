@@ -16,14 +16,15 @@
 
 title: "Deborah Goldhaft"
 email: deborah@fireiceglass.com
-company: "Fire & Ice Glass Studio"
+company: "Fire & Ice Studio"
 company-short: "Fire & Ice"
-description: "Architectural Art Glass artisan Deborah Goldhaft crafts fine art glass, custom architectural designs, and functional art pieces, as well as offers workshops for groups and individuals. Let's make a one-of-a-kind custom etched architectural art glass piece for your home or business."
+description: "Artisan Deborah Goldhaft crafts fine art glass, custom architectural designs, and functional art pieces, as well as offers workshops for groups and individuals. Let's make a one-of-a-kind custom etched architectural art glass piece for your home or business."
 
 port: 4050
-baseurl: "/new2019/" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 image-path: "assets/images/"
 portfolio-path: "assets/portfolio/"
+favicon-path: "assets/favicons/"
 url: "http://www.fireiceglass.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -57,6 +58,6 @@ sass:
 exclude:
   - Gemfile
   - Gemfile.lock
-  - kramdown.md
+  - LICENSE
   - README.md
   - OLD/
