@@ -43,10 +43,13 @@
   }
   
   a {
-    display: block; 
+    display: block;
+    line-height: var(--line-height__headers);
   }
   
   /*a*/&__link {
+    padding: 0.25rem 0;
+    
     @include bp-up($left-nav) {
       padding: calc(var(--v-rhythm)/2) calc(var(--gutter)/2);
     }
@@ -84,7 +87,7 @@
 
 // Showing the right grand-child navigation
 /*body*/.fine-art-glass #fine-art-glass,
-.architectural #architectural {
+.architectural-glass #architectural-glass {
   @include show();
 }
 

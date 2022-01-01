@@ -82,6 +82,12 @@ p, blockquote, ol, ul, dl, table, form, figure, address, pre {
   margin-bottom: 0;
 }
 
+blockquote,
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 ul,
 ol {
   list-style-type: none;
@@ -128,6 +134,10 @@ small,
   letter-spacing: var(--serif__kern);
 }
 
+.smaller {
+  font-size: 0.75rem;
+}
+
 abbr {
   border-bottom: 1px dotted currentcolor;
   font-weight: $fallback__weight__serif__bold;
@@ -168,4 +178,54 @@ hr {
     'wght' var(--sans__wght),
     'wdth' var(--sans__wdth);
   letter-spacing: var(--sans__kern);
+}
+
+.fire {
+  color: palette(fire);
+}
+
+hr.fire {
+  border-color: palette(fire);
+}
+
+// Float images
+.align-right {
+  float: right;
+  margin: 0 0 1rem 1rem;
+  
+  @include bp-up($bp-md) {
+    margin: 0 -5% 1rem 1.5rem;
+  }
+  
+  @include bp-up($bp-xl) {
+    margin: 0 -10% 1rem 2rem;
+  }
+}
+
+.align-left {
+  float: left;
+  margin: 0 1rem 1rem 0;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  
+  @include bp-up($bp-md) {
+    margin: 0 1.5rem 1rem -5%;
+  }
+  
+  @include bp-up($bp-xl) {
+    margin: 0 2rem 1rem -10%;
+  }
+}
+
+// Widths
+.w-25 {
+  width: 25%;
+}
+
+.w-33 {
+  width: 33%;
+}
+
+.w-45 {
+  width: 45%;
 }

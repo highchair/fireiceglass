@@ -1,0 +1,86 @@
+
+.portfolio {
+  @include spacing('b');
+  background-color: $ice-tint__light;
+  margin: 0 -1rem;
+  
+  &__gallery {
+    
+    /*ul*/&__list {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      margin: 0;
+      overflow: visible;
+      width: calc(var(--length) * 100%);
+      
+      li {
+        list-style: none;
+      }
+    }
+    
+    /*figure*/&__card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      margin: 0 1rem 1rem !important;
+      position: relative;
+    }
+    
+    &__img {
+      display: block;
+    }
+    
+    /*figcaption*/&__caption:not(:empty) {
+      padding: 1rem;
+      text-align: center;
+    }
+  }
+  
+  /*ol*/&__thumbs {
+    margin: 0;
+    text-align: center;
+    
+    li {
+      display: inline;
+      list-style: none;
+    }
+    
+    &__link {
+      border: 2px solid transparent !important;
+      height: 50px;
+      
+      &:hover {
+        border-color: $fire !important;
+      }
+    }
+  }
+  
+  // Grouped media queries
+  @include bp-up($bp-md) {
+    
+    &__gallery {
+      &__list {
+        align-items: stretch;
+      }
+      
+      &__img {
+        max-height: 75vh;
+        // Align shorter images vertically
+        position: relative;
+        top: calc(50% - 21px); // needs to subtract half the height of the figcaption
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  @media (min-width: em($bp-md)) and (orientation: portrait) {
+    margin: 0 -4rem;
+    
+    &__gallery__img {
+      max-height: 40vh;
+    }
+  }
+}

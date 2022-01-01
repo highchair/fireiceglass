@@ -19,10 +19,11 @@
       column-gap: var(--gutter);
       
       .span-multiple {
-        column-span: all;
+        column-span: all !important;
       }
       
       p {
+        display: inline-block;
         page-break-inside: avoid;
         break-inside: avoid;
       }

@@ -15,25 +15,28 @@
 //</body>
 
 .layout {
-  @include bp-up($left-nav) {
-    display: grid;
-    grid-template-areas:
-      "header main main main"
-      "header footer footer footer";
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 0;
-  }
   
-  @include bp-up($bp-lg) {
-    grid-template-areas:
-      "header main"
-      "header footer";
-    grid-template-columns: 288px 1fr;
+  // <div> wrapper around everything
+  &__wrapper {
+    overflow: hidden;
+    
+    @include bp-up($left-nav) {
+      display: grid;
+      grid-template-areas:
+        "header main main main"
+        "header footer footer footer";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-gap: 0;
+    }
+    
+    @include bp-up($bp-lg) {
+      grid-template-areas:
+        "header main"
+        "header footer";
+      grid-template-columns: 288px 1fr;
+    }
   }
-
-  // <body> layout template
-  &--page {}
 
   // <header>
   &__header {

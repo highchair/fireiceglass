@@ -32,6 +32,7 @@
     opacity: 0.75;
     padding-top: var(--v-rhythm);
     padding-bottom: var(--v-rhythm);
+    text-align: center;
     
     .page__portfolio-category &,
     .page__portfolio-item & span {
@@ -46,11 +47,6 @@
         'wdth' var(--sans__wdth);
       letter-spacing: var(--sans__kern);
       text-transform: uppercase;
-    }
-    
-    .page__portfolio-category &,
-    .page__portfolio-item & {
-      text-align: center;
     }
   }  
 

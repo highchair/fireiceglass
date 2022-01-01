@@ -4,9 +4,30 @@
   .main__header {
     @include sr-only;
   }
+  
+  .article__callout h3 br {
+    @include hide();
+    
+    @include bp-up($bp-lg) {
+      @include show(inline);
+    }
+  }
 }
 
-.image-grid--home {
+.image-intro {
+  img {
+    box-shadow: 0.25rem 0.25rem 1rem rgba(#000, 0.33);
+    max-height: 74vh;
+  }
+  
+  &__1 {
+    border: 0 !important;
+    display: block;
+    text-align: center;
+  }
+}
+
+/*.image-grid--home {
   &__1 {
     grid-column: col 1 / span 8;
     grid-row: row 1;
@@ -100,4 +121,4 @@
   //    grid-column: col 4 / span 4;
   //  }
   //}
-}
+}*/
