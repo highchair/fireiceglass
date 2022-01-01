@@ -1,0 +1,25 @@
+<div class="snapper snapper-noscroll portfolio" role="banner" data-snapper-nextprev>
+  <div class="snapper_pane portfolio__gallery">
+    {% for item in items %}
+      {% if forloop.first %}
+    <ul class="snapper_items snapper_center portfolio__gallery__list" style="--length: {{ forloop.length }}">
+      {% endif %}
+      <li class="snapper_item" id="item-{{ forloop.index }}">
+        <figure class="portfolio__gallery__card">
+          <img src="{{ site.baseurl }}{{ site.portfolio-path }}{{ item.imgsrc }}" class="portfolio__gallery__img" alt="" />
+          <figcaption class="portfolio__gallery__caption"><b>{{ item.title }}</b>{% if item.descript != '' %}: {{ item.descript }}{% endif %}</figcaption>
+        </figure>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+  <ol class="snapper_nav portfolio__thumbs" aria-hidden="true">
+    {% for item in items %}
+    <li>
+      <a href="#item-{{ forloop.index }}" class="portfolio__thumbs__link">
+        <img src="{{ site.baseurl }}{{ site.portfolio-path }}{{ item.imgsrc }}" class="portfolio__thumbs__img" alt="" />
+      </a>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
