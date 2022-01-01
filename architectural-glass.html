@@ -1,0 +1,33 @@
+---
+layout: page
+permalink: portfolio/architectural-glass/
+title: "Custom Architectural Glass"
+body-class: page__portfolio-item architectural-glass
+---
+
+{% comment %}
+{% assign items = site.data.architectural | where: 'category', "New" %}
+{% endcomment %}
+
+{% assign items = site.data.architectural %}
+{% include gallery.html %}
+
+<div class="article__content">
+  <div class="typography">
+    <h3 class="span-multiple text-align-center h4 vertical-rhythm"><em>The finishing touch for your home.</em></h3>
+    <p>Bespoke glass panel designs for artistic wall sculpture, front door glass panels, transoms, sidelights, interior windows for light with privacy and interest, kitchen cabinet door glass.</p>
+    <p>These custom designs can be adapted for any size or shape. We work one on one with clientele and will incorporate your design preferences. Many of Fire & Ice Studio’s previous designs and custom artwork are also available upon request. </p>
+    
+    <hr class="fire span-multiple" />
+    <figure class="span-multiple">
+      <blockquote>
+        <p>Hi Deborah,<br>
+          I can't tell you how nice it is to come home to your glass doors. The 
+          house is completely changed by their addition. The house is so much better!</p>
+      </blockquote>
+      <figcaption>
+        <cite>— Liz</cite>
+      </figcaption>
+    </figure>
+  </div>
+</div>
