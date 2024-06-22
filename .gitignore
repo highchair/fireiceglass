@@ -4,3 +4,4 @@ OLD/
 _site/
 .sass-cache/
 *.css.map
+*.DS_Store
